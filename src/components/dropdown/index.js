@@ -556,9 +556,15 @@ export default class Dropdown extends PureComponent {
 
         return (
           <DropdownItem index={index} key={index} {...props}>
+            { !label &&
             <Text style={[styles.item, itemTextStyle, style]} numberOfLines={1}>
               {title}
-            </Text>
+            </Text>}
+            { label &&
+              <View>
+              {title}
+              </View>
+            }
           </DropdownItem>
         );
       });
